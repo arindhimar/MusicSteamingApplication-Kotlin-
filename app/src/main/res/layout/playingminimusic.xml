@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="30pt"
+    app:cardCornerRadius="30sp"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_gradient_background"
+        android:weightSum="4">
+
+        <!-- Music Cover Image -->
+        <ImageView
+            android:id="@+id/miniPlayerImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_smart_yt"
+            android:scaleType="fitCenter"
+            android:padding="4dp"/>
+
+        <!-- Music Title and Artist -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/miniPlayerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Song Title"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/miniPlayerArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Artist Name"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <!-- Music Player Controls -->
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|end">
+
+            <!-- Previous Track Button -->
+            <Button
+                android:id="@+id/miniPlayerPrevBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⏮"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_button" />
+
+            <!-- Play/Pause Button -->
+            <Button
+                android:id="@+id/miniPlayerPlayPauseBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="▶️"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_button" />
+
+            <!-- Next Track Button -->
+            <Button
+                android:id="@+id/miniPlayerNextBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⏭"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_button" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

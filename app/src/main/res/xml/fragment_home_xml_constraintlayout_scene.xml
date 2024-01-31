@@ -1,0 +1,74 @@
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!-- ConstraintSets -->
+    <ConstraintSet android:id="@+id/start">
+        <!-- Left constraint set where the card is not visible -->
+        <Constraint
+            android:id="@id/cardView1"
+            android:layout_width="120pt"
+            android:layout_height="120pt"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toStartOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/bringLeft">
+        <!-- Bringing Card to left without changing visibility instantly -->
+        <Constraint
+            android:id="@id/cardView1"
+            android:layout_width="120pt"
+            android:layout_height="120pt"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toStartOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <!-- Right constraint set where the card is not visible -->
+        <Constraint
+            android:id="@id/cardView1"
+            android:layout_width="120pt"
+            android:layout_height="120pt"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/bringRight">
+        <!-- Bringing Card to left without changing visibility instantly -->
+        <Constraint
+            android:id="@id/cardView1"
+            android:layout_width="120pt"
+            android:layout_height="120pt"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toStartOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/middle">
+        <!-- Right constraint set where the card is not visible -->
+        <Constraint
+            android:id="@id/cardView1"
+            android:layout_width="120pt"
+            android:layout_height="120pt"
+            android:visibility="visible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/middle"
+        motion:duration="500">
+        <!-- Swipe animation to move the card to the middle with a duration of 2 seconds -->
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@id/cardView1"
+            motion:touchAnchorSide="right" />
+    </Transition>
+
+
+</MotionScene>

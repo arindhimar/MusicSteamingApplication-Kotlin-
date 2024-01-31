@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120pt"
+    android:layout_height="120pt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:background="@drawable/rounded_gradient_background">
+
+        <ImageView
+            android:src="@drawable/defaultmusic"
+            android:layout_weight="0.6"
+            android:id="@+id/historyCardImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="1.2"
+            android:textColor="@color/white"
+            android:text="temp"
+            android:textSize="40sp"
+            android:id="@+id/historyCardSongName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/historyCardSongDesc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:text="temp"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
